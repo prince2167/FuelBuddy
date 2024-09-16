@@ -5,6 +5,7 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
+import Layout from "./components/Layout";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <UserButton />
         </SignedIn>
       </header>
+      <Layout />
     </>
   );
 }
