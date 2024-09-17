@@ -7,8 +7,9 @@ const Comment = ({ comment, addReply }) => {
   const [showReply, setShowReply] = useState(false);
 
   const { user } = useUser();
-  console.log(user);
-  const handleReplySubmit = () => {
+
+  const handleReplySubmit = (event) => {
+    event.preventDefault();
     if (replyText.trim() === "") return;
 
     const reply = {
@@ -48,7 +49,7 @@ const Comment = ({ comment, addReply }) => {
 
           {/* Reply Input */}
           {showReply && (
-            <div className="mt-2">
+            <form className="mt-2" onSubmit={handleReplySubmit}>
               <input
                 type="text"
                 value={replyText}
@@ -57,12 +58,12 @@ const Comment = ({ comment, addReply }) => {
                 className="w-full p-2 border border-gray-300 rounded-lg"
               />
               <button
-                onClick={handleReplySubmit}
+                type="submit"
                 className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg"
               >
                 Post Reply
               </button>
-            </div>
+            </form>
           )}
 
           {/* Render Nested Replies */}
