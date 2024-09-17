@@ -81,7 +81,7 @@ const CreatePost = () => {
             className="object-cover rounded-md h-full"
           />
           <button className="absolute top-1 right-1">
-            <MdOutlineCancel size="25" onClick={() => setSelectedImage(null)} />
+            <MdOutlineCancel size="24" onClick={() => setSelectedImage(null)} />
           </button>
         </div>
       )}
