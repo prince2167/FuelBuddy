@@ -1,5 +1,4 @@
 import { usePosts } from "../context/post-context";
-import { data } from "../utils/data";
 import { PostCard } from "./PostCard";
 
 export const PostFeed = () => {

@@ -13,7 +13,6 @@ const Navbar = ({ setSidebarOpen }) => (
       className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
       onClick={() => setSidebarOpen(true)}
     >
-      <span className="sr-only">Open sidebar</span>
       <FaBars className="h-6 w-6" aria-hidden="true" />
     </button>
     <div className="flex justify-end gap-x-4 w-full lg:gap-x-6">
