@@ -1,23 +1,16 @@
 import "./App.css";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+import { useUser, RedirectToSignIn } from "@clerk/clerk-react";
 import Layout from "./components/Layout";
 
 function App() {
+  const { isSignedIn } = useUser();
+
+  if (!isSignedIn) {
+    return <RedirectToSignIn />;
+  }
+
   return (
     <>
-      <header>
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-      </header>
       <Layout />
     </>
   );

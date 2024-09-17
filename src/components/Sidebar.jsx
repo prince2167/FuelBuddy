@@ -1,5 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 import { classNames, navigation } from "../utils";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => (
   <>
@@ -65,6 +66,12 @@ const SidebarNav = () => (
           </a>
         </li>
       ))}
+      <li className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex items-center gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+        <span className="h-6 w-6 shrink-0">
+          <IoIosAddCircleOutline size="24" />
+        </span>
+        <p>Create Post</p>
+      </li>
     </ul>
   </nav>
 );

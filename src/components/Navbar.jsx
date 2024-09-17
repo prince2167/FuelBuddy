@@ -1,4 +1,9 @@
-import { SignedIn, UserButton } from "@clerk/clerk-react";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = ({ setSidebarOpen }) => (
@@ -13,6 +18,9 @@ const Navbar = ({ setSidebarOpen }) => (
     </button>
     <div className="flex justify-end gap-x-4 w-full lg:gap-x-6">
       <div className="flex items-center gap-x-4 lg:gap-x-6">
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
         <SignedIn>
           <UserButton />
         </SignedIn>
